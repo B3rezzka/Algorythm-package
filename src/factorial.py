@@ -1,11 +1,11 @@
 
-def factorial(n) -> int:
+def factorial(n: int) -> int:
     result = 1
     for _ in range(1, (n + 1)):
         result *= _
     return result
 
-def recoursive_factorial(n) -> int:
+def recoursive_factorial(n: int) -> int:
     if n < 0:
         raise ValueError("Negative number is unexpected")
     elif n <=1:
