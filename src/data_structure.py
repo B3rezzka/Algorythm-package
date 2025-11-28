@@ -93,15 +93,15 @@ class Queue:
         Поп из начала списка O(n), но для простоты и соответствия требованиям
         используем встроенный list. Для O(1) dequeue можно использовать collections.deque.        
         """
-        return self._items.pop(0)
+        return self._items.pop()
 
     def front(self) -> int:
         """
-        Возвращает элемент из начала очереди без удаления.
+        Возвращает элемент из конца очереди без удаления.
         """
         if self.is_empty():
             raise IndexError("front from empty queue")
-        return self._items[0]
+        return self._items[-1]
 
     def is_empty(self) -> bool:
         """

@@ -1,5 +1,7 @@
 
 def factorial(n: int) -> int:
+    if n < 0:
+        raise ValueError("Negative number is unexpected")
     result = 1
     for _ in range(1, (n + 1)):
         result *= _
